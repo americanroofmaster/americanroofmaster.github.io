@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Inspection Permission Form — American Roofmaster</title>
+<meta name="description" content="Property & Roof Inspection Permission Form — American Roofmaster" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1f3a8a;
+    --navy-dark: #14265c;
+    --red: #c8202e;
+    --red-dark: #9c1822;
+    --gold: #c8a032;
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --muted: #6b7280;
+    --border: #d8dce3;
+    --border-soft: #e7eaf0;
+    --green: #15803d;
+    --green-bg: #dcfce7;
+    --shadow-sm: 0 1px 2px rgba(20, 38, 92, 0.06);
+    --shadow-md: 0 4px 12px rgba(20, 38, 92, 0.08);
+    --shadow-lg: 0 12px 32px rgba(20, 38, 92, 0.12);
+    --radius: 6px;
+    --radius-lg: 10px;
+    --font-display: 'Oswald', 'Impact', sans-serif;
+    --font-body: 'Source Sans 3', system-ui, sans-serif;
+    --font-script: 'Caveat', cursive;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+    font-size: 16px;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(31, 58, 138, 0.04) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(200, 32, 46, 0.03) 0%, transparent 50%);
+  }
+
+  /* ============================================
+     LAYOUT
+  ============================================ */
+  .page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+
+  .doc {
+    display: grid;
+    grid-template-columns: minmax(300px, 420px) 1fr;
+    gap: 0;
+    background: var(--panel);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-soft);
+  }
+
+  /* ============================================
+     LEFT BRAND COLUMN
+  ============================================ */
+  .brand-col {
+    background: linear-gradient(180deg, #fafbfd 0%, #eef1f6 100%);
+    padding: 28px 28px 32px;
+    border-right: 4px solid var(--navy);
+    position: relative;
+  }
+  .brand-col::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    right: -4px;
+    width: 4px;
+    background: var(--red);
+    transform: translateX(4px);
+  }
+
+  .sign-wrap {
+    background: var(--panel);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 28px;
+  }
+  .sign-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .why-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.65rem;
+    line-height: 1.05;
+    letter-spacing: 0.5px;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .why-heading .red { color: var(--red); display: block; }
+
+  .why-underline {
+    width: 56px;
+    height: 4px;
+    background: var(--navy);
+    margin: 14px 0 12px;
+    border-radius: 2px;
+  }
+
+  .why-sub {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.78rem;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 22px;
+  }
+
+  .process {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .process-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+  .process-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--red);
+    line-height: 1;
+    padding-top: 2px;
+  }
+  .process-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: var(--navy);
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+  .process-body {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .brand-cta {
+    margin-top: 32px;
+    padding-top: 22px;
+    border-top: 2px solid var(--navy);
+  }
+  .brand-cta-label {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .brand-phone {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .brand-phone a { color: inherit; text-decoration: none; }
+  .brand-web {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .brand-web a { color: inherit; text-decoration: none; }
+
+  /* ============================================
+     BULLET LIST (why we're above the rest)
+  ============================================ */
+  .why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .why-list li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .why-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background: var(--red);
+    transform: rotate(45deg);
+    border-radius: 1px;
+  }
+  .why-title {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--navy);
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  .why-list strong {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  /* ============================================
+     BRAND FOOTER (contact + 2nd yard sign)
+  ============================================ */
+  .brand-footer {
+    margin-top: 32px;
+    padding-top: 22px;
+    border-top: 2px solid var(--navy);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .brand-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+    padding: 0 4px;
+  }
+  .brand-contact-line {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.8px;
+    color: var(--navy);
+    word-break: break-word;
+    line-height: 1.4;
+  }
+  .brand-contact-line a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .brand-contact-line a:hover {
+    border-bottom-color: var(--red);
+  }
+  .sign-wrap-footer {
+    margin-bottom: 0;
+  }
+
+  /* ============================================
+     SOCIAL ROW (FB + Google review under footer sign)
+  ============================================ */
+  .social-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.4px;
+    transition: all 0.15s;
+    box-shadow: var(--shadow-sm);
+  }
+  .social-link:hover {
+    border-color: var(--navy);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  .social-link:first-child svg { color: #1877F2; } /* Facebook blue */
+
+  .social-tagline {
+    text-align: center;
+    margin-top: 10px;
+    font-family: var(--font-script);
+    font-size: 1.1rem;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  /* ============================================
+     RIGHT FORM COLUMN
+  ============================================ */
+  .form-col {
+    padding: 36px 44px 40px;
+    background: var(--panel);
+  }
+
+  .doc-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.85rem;
+    line-height: 1.1;
+    color: var(--navy);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .doc-subtitle {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    line-height: 1.65;
+    max-width: none;
+  }
+  .doc-subtitle strong {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  .title-rule {
+    height: 4px;
+    background: var(--navy);
+    margin: 20px 0 4px;
+    position: relative;
+  }
+  .title-rule::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: var(--red);
+  }
+
+  .section {
+    margin-top: 32px;
+  }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .section-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--red);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .section-optional {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: var(--font-body);
+    font-style: italic;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 18px;
+  }
+  .grid .full { grid-column: 1 / -1; }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+  .field label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+  .field label .req { color: var(--red); margin-left: 2px; }
+
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="tel"],
+  .field input[type="date"],
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.15s, box-shadow 0.15s;
+    font-family: var(--font-body);
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(31, 58, 138, 0.12);
+  }
+
+  .field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1.5l5 5 5-5' fill='none' stroke='%231f3a8a' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  .field .hint {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* ============================================
+     ACKNOWLEDGMENT ROWS (Yes/No)
+  ============================================ */
+  .ack-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: #fafbfd;
+    margin-bottom: 10px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .ack-row.answered { background: #fff; border-color: var(--border-soft); }
+  .ack-row.invalid { border-color: var(--red); background: #fef2f2; }
+
+  .ack-text {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+
+  .ack-buttons {
+    display: flex;
+    gap: 6px;
+  }
+  .ack-btn {
+    appearance: none;
+    border: 1.5px solid var(--border);
+    background: #fff;
+    color: var(--ink-soft);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 8px 18px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.15s;
+    min-width: 64px;
+  }
+  .ack-btn:hover { border-color: var(--navy); color: var(--navy); }
+  .ack-btn.active.yes {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+  }
+  .ack-btn.active.no {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+
+  /* ============================================
+     SIGNATURE
+  ============================================ */
+  .sig-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 14px;
+    background: var(--border-soft);
+    padding: 4px;
+    border-radius: var(--radius);
+    width: fit-content;
+  }
+  .sig-tab {
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 8px 18px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .sig-tab.active {
+    background: #fff;
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .sig-panel { display: none; }
+  .sig-panel.active { display: block; }
+
+  .sig-typed-preview {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    background: #fff;
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-family: var(--font-script);
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .sig-typed-preview.has-sig { color: var(--ink); }
+
+  .sig-canvas-wrap {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  #sig-canvas {
+    display: block;
+    width: 100%;
+    height: 160px;
+    touch-action: none;
+    cursor: crosshair;
+  }
+  .sig-canvas-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+    pointer-events: none;
+    font-style: italic;
+  }
+
+  .sig-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sig-clear {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--navy);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+  .sig-clear:hover { text-decoration: underline; }
+
+  .legal-disclaimer {
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: #f5f6f8;
+    border-left: 3px solid var(--navy);
+    border-radius: 4px;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     SUBMIT
+  ============================================ */
+  .submit-row {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .submit-btn {
+    appearance: none;
+    border: none;
+    background: var(--navy);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.15s;
+    box-shadow: 0 4px 12px rgba(31, 58, 138, 0.25);
+  }
+  .submit-btn:hover:not(:disabled) {
+    background: var(--navy-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(31, 58, 138, 0.3);
+  }
+  .submit-btn:disabled {
+    background: #b0b6c2;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .submit-hint {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  /* ============================================
+     SUCCESS STATE
+  ============================================ */
+  .success {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .success.show { display: block; }
+  .success-icon {
+    width: 80px; height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--green-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .success-icon svg { width: 40px; height: 40px; stroke: var(--green); }
+  .success h2 {
+    font-family: var(--font-display);
+    color: var(--navy);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+  .success p {
+    color: var(--ink-soft);
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Mobile-only footer sign — base hidden on desktop, shown in mobile media query below */
+  .mobile-footer-sign {
+    display: none;
+    margin-top: 16px;
+    padding: 0 8px;
+  }
+  .mobile-footer-sign img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  /* ============================================
+     RESPONSIVE
+  ============================================ */
+  @media (max-width: 880px) {
+    .page { padding: 12px 8px; }
+    .doc { grid-template-columns: 1fr; border-radius: var(--radius-lg); }
+    .brand-col {
+      padding: 20px 20px 24px;
+      border-right: none;
+      border-bottom: 4px solid var(--navy);
+    }
+    .brand-col::after {
+      top: auto;
+      bottom: -4px;
+      left: 0; right: 0;
+      width: auto;
+      height: 4px;
+      transform: translateY(4px);
+    }
+    /* On mobile, hide the bottom sign inside the brand column;
+       the mobile-footer version below the form will render instead. */
+    .sign-wrap-footer { display: none; }
+    /* And let the contact info still show in the brand column, centered */
+    .brand-footer { gap: 0; }
+
+    .form-col { padding: 28px 20px 32px; }
+    .grid { grid-template-columns: 1fr; }
+    .doc-title { font-size: 1.5rem; }
+    .why-heading { font-size: 1.5rem; }
+    .ack-row { grid-template-columns: 1fr; gap: 12px; }
+    .ack-buttons { width: 100%; }
+    .ack-btn { flex: 1; padding: 12px 0; font-size: 0.95rem; }
+
+    /* Mobile footer sign shows below the entire document */
+    .mobile-footer-sign { display: block; }
+  }
+
+  @media (max-width: 480px) {
+    .form-col { padding: 24px 16px 28px; }
+    .brand-col { padding: 16px 16px 20px; }
+    .doc-title { font-size: 1.3rem; }
+  }
+
+  /* Print fallback */
+  @media print {
+    body { background: #fff; }
+    .doc { box-shadow: none; border: none; }
+    .submit-btn, .sig-tabs, .sig-clear { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="doc" id="doc">
+
+    <!-- ============ LEFT BRAND COLUMN ============ -->
+    <aside class="brand-col">
+      <div class="sign-wrap">
+        <img src="American_Roof_Master_Fun_Yard_Sign_PrintReady.webp"
+             alt="American Roofmaster — 817-210-2626 — BBB Accredited" />
+      </div>
+
+      <h2 class="why-heading">
+        Why We're Above
+        <span class="red">The Rest</span>
+      </h2>
+      <div class="why-underline"></div>
+      <div class="why-sub">Our Process &nbsp;•&nbsp; Your Peace Of Mind</div>
+
+      <ul class="why-list">
+        <li>
+          <span class="why-title">Family-Owned, Locally Trusted</span>
+          Over a decade serving homeowners and businesses with the personal accountability only a family business delivers.
+        </li>
+        <li>
+          <span class="why-title">Insurance Claims Are Our Specialty</span>
+          Storm, hail, and wind damage. We work directly with your carrier so you don't have to navigate the claim alone.
+        </li>
+        <li>
+          <span class="why-title">Unmatched Claims Guidance</span>
+          Storm damage claims are a process that can last several weeks to a month or more. We keep you informed during the entire process, every step of the way.
+        </li>
+        <li>
+          <span class="why-title">Free, No-Pressure Inspection</span>
+          A trained professional documents your roof's condition thoroughly. No obligation, no high-pressure sales.
+        </li>
+        <li>
+          <span class="why-title">Unmatched Documentation</span>
+          The storm most likely damaged more than roofing surfaces. We document <strong>everything</strong> that should be presented to your carrier for your property claim.
+        </li>
+        <li>
+          <span class="why-title">Unmatched Supplement Process</span>
+          Everything that should be examined for carrier review is submitted properly with photos and correct pricing. Repair items often get missed by the original adjuster &mdash; sometimes by accident, sometimes left off in anticipation of contractor submission. Owners miss this and items go unpaid. Don't let your claim go undervalued. We 100% handle this for you.
+        </li>
+        <li>
+          <span class="why-title">Multi-Manufacturer Certified</span>
+          Certified installers for the industry's leading shingle brands &mdash; access to enhanced warranties most contractors can't offer.
+        </li>
+        <li>
+          <span class="why-title">Lifetime Workmanship Warranty</span>
+          We stand behind every roof we install with a lifetime workmanship guarantee &mdash; a promise few competitors are willing to make.
+        </li>
+      </ul>
+
+      <div class="brand-footer">
+        <div class="brand-contact">
+          <div class="brand-contact-line">
+            <a href="https://americanroofmaster.com">AmericanRoofMaster.com</a>
+          </div>
+          <div class="brand-contact-line">
+            <a href="mailto:RoofMaster@AmericanRoofMaster.com">RoofMaster@AmericanRoofMaster.com</a>
+          </div>
+        </div>
+        <div class="sign-wrap sign-wrap-footer">
+          <img src="American_Roof_Master_Fun_Yard_Sign_PrintReady.webp"
+               alt="American Roofmaster" />
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/share/1FyXw3irxc/" target="_blank" rel="noopener" class="social-link" aria-label="Visit our Facebook page">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.3-1.5 1.5-1.5H17V4.3c-.4-.1-1.4-.2-2.5-.2-2.5 0-4 1.5-4 4.2V10.5H8v3h2.5V21h3z" fill="currentColor"/>
+            </svg>
+            <span>Follow on Facebook</span>
+          </a>
+          <a href="https://g.page/r/Ca-M_ehLpCycEBM/review" target="_blank" rel="noopener" class="social-link" aria-label="Leave us a Google review">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.4c-.2 1.2-.9 2.3-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.3z" fill="#4285F4"/>
+              <path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.9-1.8-5.7-4.2H3v2.6C4.6 19.7 8 22 12 22z" fill="#34A853"/>
+              <path d="M6.3 13.9c-.2-.6-.3-1.2-.3-1.9s.1-1.3.3-1.9V7.5H3C2.4 8.9 2 10.4 2 12s.4 3.1 1 4.5l3.3-2.6z" fill="#FBBC05"/>
+              <path d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.8-2.8C16.9 3 14.7 2 12 2 8 2 4.6 4.3 3 7.5l3.3 2.6c.8-2.4 3.1-4.2 5.7-4.2z" fill="#EA4335"/>
+            </svg>
+            <span>Leave a Google Review</span>
+          </a>
+        </div>
+        <div class="social-tagline">Your words matter</div>
+      </div>
+    </aside>
+
+    <!-- ============ RIGHT FORM COLUMN ============ -->
+    <main class="form-col">
+      <!-- FORM -->
+      <form id="ack-form" action="https://formspree.io/f/xqejlpbv" method="POST" novalidate>
+        <h1 class="doc-title">Property &amp; Roof Inspection Permission</h1>
+        <p class="doc-subtitle">
+          By signing this form, the property owner grants American Roofmaster permission to perform a property and roof inspection, including photographing and documenting any observed conditions.
+          <br />
+          This is <strong>not</strong> an inspection report and does <strong>not</strong> obligate the owner to any repair work &mdash; it simply authorizes the inspection.
+        </p>
+        <div class="title-rule"></div>
+
+        <!-- SECTION 1: PROPERTY & OWNER -->
+        <div class="section">
+          <div class="section-head">
+            <span class="section-num">01</span>
+            <span class="section-title">Property &amp; Owner Information</span>
+          </div>
+          <div class="grid">
+            <div class="field">
+              <label for="owner_name">Property Owner Name <span class="req">*</span></label>
+              <input type="text" id="owner_name" name="owner_name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="817-210-2626" />
+            </div>
+            <div class="field">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="property_type">Property Type <span class="req">*</span></label>
+              <select id="property_type" name="property_type" required>
+                <option value="">— Select —</option>
+                <option>Residential — Single Family</option>
+                <option>Residential — Multi-Family</option>
+                <option>Commercial</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="address">Property Address <span class="req">*</span></label>
+              <input type="text" id="address" name="address" required autocomplete="street-address" placeholder="Street, City, State, ZIP" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: INSPECTION DETAILS -->
+        <div class="section">
+          <div class="section-head">
+            <span class="section-num">02</span>
+            <span class="section-title">Inspection Details</span>
+          </div>
+          <div class="grid">
+            <div class="field">
+              <label for="inspection_date">Inspection Date <span class="req">*</span></label>
+              <input type="date" id="inspection_date" name="inspection_date" required />
+              <div class="hint">Scheduled or completed date.</div>
+            </div>
+            <div class="field">
+              <label for="inspector">American Roofmaster Representative <span class="req">*</span></label>
+              <input type="text" id="inspector" name="inspector" required placeholder="Representative name" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: INSURANCE (OPTIONAL) -->
+        <div class="section">
+          <div class="section-head">
+            <span class="section-num">03</span>
+            <span class="section-title">Insurance Information</span>
+            <span class="section-optional">(if applicable)</span>
+          </div>
+          <div class="grid">
+            <div class="field">
+              <label for="carrier">Insurance Carrier</label>
+              <input type="text" id="carrier" name="carrier" placeholder="e.g., State Farm, Allstate" />
+            </div>
+            <div class="field">
+              <label for="claim_number">Claim Number</label>
+              <input type="text" id="claim_number" name="claim_number" />
+            </div>
+            <div class="field">
+              <label for="date_of_loss">Date of Loss</label>
+              <input type="date" id="date_of_loss" name="date_of_loss" />
+            </div>
+            <div class="field">
+              <label for="adjuster">Adjuster Name</label>
+              <input type="text" id="adjuster" name="adjuster" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: PERMISSIONS GRANTED -->
+        <div class="section">
+          <div class="section-head">
+            <span class="section-num">04</span>
+            <span class="section-title">Permissions Granted</span>
+          </div>
+
+          <div class="ack-row" data-ack="ack_1">
+            <div class="ack-text">I grant American Roofmaster permission to access my property and conduct a roof inspection.</div>
+            <div class="ack-buttons">
+              <button type="button" class="ack-btn yes" data-val="Yes">Yes</button>
+              <button type="button" class="ack-btn no" data-val="No">No</button>
+            </div>
+            <input type="hidden" name="ack_1" id="ack_1" />
+          </div>
+
+          <div class="ack-row" data-ack="ack_2">
+            <div class="ack-text">I authorize American Roofmaster to photograph and document any conditions observed during the inspection.</div>
+            <div class="ack-buttons">
+              <button type="button" class="ack-btn yes" data-val="Yes">Yes</button>
+              <button type="button" class="ack-btn no" data-val="No">No</button>
+            </div>
+            <input type="hidden" name="ack_2" id="ack_2" />
+          </div>
+
+          <div class="ack-row" data-ack="ack_3">
+            <div class="ack-text">I understand this permission does not obligate me to enter into any repair contract or agreement.</div>
+            <div class="ack-buttons">
+              <button type="button" class="ack-btn yes" data-val="Yes">Yes</button>
+              <button type="button" class="ack-btn no" data-val="No">No</button>
+            </div>
+            <input type="hidden" name="ack_3" id="ack_3" />
+          </div>
+
+          <div class="ack-row" data-ack="ack_4">
+            <div class="ack-text">I confirm I am the property owner or am authorized to grant inspection access. The information above is accurate.</div>
+            <div class="ack-buttons">
+              <button type="button" class="ack-btn yes" data-val="Yes">Yes</button>
+              <button type="button" class="ack-btn no" data-val="No">No</button>
+            </div>
+            <input type="hidden" name="ack_4" id="ack_4" />
+          </div>
+        </div>
+
+        <!-- SECTION 5: SIGNATURE -->
+        <div class="section">
+          <div class="section-head">
+            <span class="section-num">05</span>
+            <span class="section-title">Signature</span>
+          </div>
+
+          <div class="sig-tabs" role="tablist">
+            <button type="button" class="sig-tab active" data-tab="typed" role="tab">Type Signature</button>
+            <button type="button" class="sig-tab" data-tab="drawn" role="tab">Draw Signature</button>
+          </div>
+
+          <div class="sig-panel active" id="sig-typed">
+            <div class="sig-typed-preview" id="typed-preview">Your signature will appear here</div>
+            <div class="field">
+              <input type="text" id="typed_signature" name="typed_signature" placeholder="Type your full legal name to sign" autocomplete="off" />
+              <div class="hint">By typing your name, you agree this is your legal electronic signature under the ESIGN Act.</div>
+            </div>
+          </div>
+
+          <div class="sig-panel" id="sig-drawn">
+            <div class="sig-canvas-wrap">
+              <canvas id="sig-canvas"></canvas>
+              <div class="sig-canvas-placeholder" id="sig-placeholder">Draw your signature here with your finger or mouse</div>
+            </div>
+            <div class="sig-actions">
+              <span>Sign above using your finger (mobile) or mouse (desktop).</span>
+              <button type="button" class="sig-clear" id="sig-clear">Clear</button>
+            </div>
+            <input type="hidden" id="drawn_signature" name="drawn_signature" />
+          </div>
+
+          <input type="hidden" id="signature_method" name="signature_method" value="typed" />
+          <input type="hidden" id="signed_at" name="signed_at" />
+          <input type="hidden" id="user_agent" name="user_agent" />
+
+          <div class="legal-disclaimer">
+            <strong>Electronic Signature Consent:</strong> By signing this form electronically and submitting it, you agree your electronic signature is the legal equivalent of your manual signature granting the permissions stated above. This consent applies only to this document. American Roofmaster will retain a copy and provide one to you upon request.
+          </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-row">
+          <button type="submit" class="submit-btn" id="submit-btn">Submit Signed Permission</button>
+          <div class="submit-hint">A copy will be emailed to you and to American Roofmaster.</div>
+        </div>
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div class="success" id="success">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2>Permission Received</h2>
+        <p>Thank you. Your inspection permission has been signed and submitted. A copy is on its way to your email, and American Roofmaster will follow up to coordinate. If you have any questions, call us at <strong>817-210-2626</strong>.</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- MOBILE-ONLY: yard sign as bottom footer of entire page -->
+  <div class="mobile-footer-sign">
+    <img src="American_Roof_Master_Fun_Yard_Sign_PrintReady.webp"
+         alt="American Roofmaster — 817-210-2626" />
+  </div>
+</div>
+
+<script>
+// ============================================
+// PHONE AUTO-FORMAT
+// ============================================
+const phoneInput = document.getElementById('phone');
+phoneInput.addEventListener('input', e => {
+  let v = e.target.value.replace(/\D/g, '').slice(0, 10);
+  if (v.length >= 7) e.target.value = `${v.slice(0,3)}-${v.slice(3,6)}-${v.slice(6)}`;
+  else if (v.length >= 4) e.target.value = `${v.slice(0,3)}-${v.slice(3)}`;
+  else e.target.value = v;
+});
+
+// ============================================
+// YES/NO BUTTONS
+// ============================================
+document.querySelectorAll('.ack-row').forEach(row => {
+  const ackName = row.dataset.ack;
+  const hidden = document.getElementById(ackName);
+  row.querySelectorAll('.ack-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      row.querySelectorAll('.ack-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      hidden.value = btn.dataset.val;
+      row.classList.add('answered');
+      row.classList.remove('invalid');
+    });
+  });
+});
+
+// ============================================
+// SIGNATURE — TAB SWITCHING
+// ============================================
+const sigTabs = document.querySelectorAll('.sig-tab');
+const sigPanels = { typed: document.getElementById('sig-typed'), drawn: document.getElementById('sig-drawn') };
+sigTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    sigTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    Object.values(sigPanels).forEach(p => p.classList.remove('active'));
+    sigPanels[tab.dataset.tab].classList.add('active');
+    document.getElementById('signature_method').value = tab.dataset.tab;
+  });
+});
+
+// ============================================
+// TYPED SIGNATURE — LIVE PREVIEW
+// ============================================
+const typedInput = document.getElementById('typed_signature');
+const typedPreview = document.getElementById('typed-preview');
+typedInput.addEventListener('input', e => {
+  const val = e.target.value.trim();
+  if (val) {
+    typedPreview.textContent = val;
+    typedPreview.classList.add('has-sig');
+  } else {
+    typedPreview.textContent = 'Your signature will appear here';
+    typedPreview.classList.remove('has-sig');
+  }
+});
+
+// Auto-fill typed signature with owner name as starting point (user can edit)
+const ownerNameInput = document.getElementById('owner_name');
+ownerNameInput.addEventListener('blur', () => {
+  if (ownerNameInput.value && !typedInput.value) {
+    typedInput.value = ownerNameInput.value;
+    typedInput.dispatchEvent(new Event('input'));
+  }
+});
+
+// ============================================
+// DRAWN SIGNATURE — CANVAS
+// ============================================
+const canvas = document.getElementById('sig-canvas');
+const ctx = canvas.getContext('2d');
+const placeholder = document.getElementById('sig-placeholder');
+const drawnInput = document.getElementById('drawn_signature');
+let drawing = false;
+let lastX = 0, lastY = 0;
+let hasDrawn = false;
+
+function resizeCanvas() {
+  const rect = canvas.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = rect.width * dpr;
+  canvas.height = rect.height * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.lineWidth = 2.5;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.strokeStyle = '#1a1a1a';
+}
+resizeCanvas();
+window.addEventListener('resize', () => {
+  const data = drawnInput.value;
+  resizeCanvas();
+});
+
+function getPos(e) {
+  const rect = canvas.getBoundingClientRect();
+  const t = e.touches ? e.touches[0] : e;
+  return { x: t.clientX - rect.left, y: t.clientY - rect.top };
+}
+function startDraw(e) {
+  e.preventDefault();
+  drawing = true;
+  const { x, y } = getPos(e);
+  lastX = x; lastY = y;
+  placeholder.style.display = 'none';
+  hasDrawn = true;
+}
+function draw(e) {
+  if (!drawing) return;
+  e.preventDefault();
+  const { x, y } = getPos(e);
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(x, y);
+  ctx.stroke();
+  lastX = x; lastY = y;
+}
+function endDraw() {
+  if (!drawing) return;
+  drawing = false;
+  drawnInput.value = canvas.toDataURL('image/png');
+}
+canvas.addEventListener('mousedown', startDraw);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', endDraw);
+canvas.addEventListener('mouseleave', endDraw);
+canvas.addEventListener('touchstart', startDraw, { passive: false });
+canvas.addEventListener('touchmove', draw, { passive: false });
+canvas.addEventListener('touchend', endDraw);
+
+document.getElementById('sig-clear').addEventListener('click', () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  placeholder.style.display = 'flex';
+  drawnInput.value = '';
+  hasDrawn = false;
+});
+
+// ============================================
+// FORM SUBMIT
+// ============================================
+const form = document.getElementById('ack-form');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  // Validate native fields
+  let valid = form.checkValidity();
+  if (!valid) {
+    form.reportValidity();
+    return;
+  }
+
+  // Validate Yes/No acknowledgments
+  let allAcked = true;
+  document.querySelectorAll('.ack-row').forEach(row => {
+    const hidden = document.getElementById(row.dataset.ack);
+    if (!hidden.value) {
+      row.classList.add('invalid');
+      allAcked = false;
+    }
+  });
+  if (!allAcked) {
+    alert('Please answer all acknowledgment questions before submitting.');
+    return;
+  }
+
+  // Validate signature
+  const method = document.getElementById('signature_method').value;
+  if (method === 'typed' && !typedInput.value.trim()) {
+    alert('Please type your signature, or switch to drawn signature.');
+    typedInput.focus();
+    return;
+  }
+  if (method === 'drawn' && !hasDrawn) {
+    alert('Please draw your signature, or switch to typed signature.');
+    return;
+  }
+
+  // Stamp submission metadata
+  document.getElementById('signed_at').value = new Date().toISOString();
+  document.getElementById('user_agent').value = navigator.userAgent;
+
+  // Submit to Formspree
+  const submitBtn = document.getElementById('submit-btn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
+  try {
+    const formData = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('success').classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      throw new Error('Submission failed');
+    }
+  } catch (err) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Signed Permission';
+    alert('Sorry — something went wrong submitting the form. Please call American Roofmaster at 817-210-2626 or try again.');
+  }
+});
+</script>
+</body>
+</html>
