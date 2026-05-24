@@ -859,7 +859,11 @@
     <!-- ============ RIGHT FORM COLUMN ============ -->
     <main class="form-col">
       <!-- FORM -->
-      <form id="ack-form" action="https://formspree.io/f/xqejlpbv" method="POST" novalidate>
+      <form id="ack-form" action="https://arm-form-handler.asherjustin.workers.dev" method="POST" novalidate>
+        <!-- Honeypot: humans never see/fill this; bots usually do. If filled, the server silently ignores the submission. -->
+        <div style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+          <label>Leave this field empty: <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+        </div>
         <h1 class="doc-title">Property &amp; Roof Inspection Permission</h1>
         <p class="doc-subtitle">
           By signing this form, the property owner grants American Roofmaster permission to perform a property and roof inspection, including photographing and documenting any observed conditions.
@@ -1050,7 +1054,7 @@
           </svg>
         </div>
         <h2>Permission Received</h2>
-        <p>Thank you. Your inspection permission has been signed and submitted. A copy is on its way to your email, and American Roofmaster will follow up to coordinate. If you have any questions, call us at <strong>817-210-2626</strong>.</p>
+        <p>Thank you. Your inspection permission has been signed and submitted. A confirmation copy is on its way to your email. American Roofmaster will follow up shortly to coordinate. If you have any questions, call us at <strong>817-210-2626</strong>.</p>
       </div>
     </main>
   </div>
